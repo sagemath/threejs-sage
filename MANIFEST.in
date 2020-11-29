@@ -1,0 +1,2 @@
+include LICENSE
+graft jupyter_threejs_sage/static

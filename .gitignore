@@ -1,0 +1,3 @@
+# Python packaging generated files
+/dist
+*.egg-info
