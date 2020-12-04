@@ -38,6 +38,7 @@ export { LineSegmentsGeometry } from '../examples/jsm/lines/LineSegmentsGeometry
 * Create a new directory for the new version in `jupyter_threejs_sage/static/` and copy the minified file there.
   (Do not remove old versions that needed by any released versions of Sage.)
 
-* The final step before releasing is to update the `version` file and the `version` line in `setup.cfg` with the new number.
+* The final step before releasing is to update the `version` file.
+
 
 As noted in [this issue](https://github.com/mrdoob/three.js/issues/20591), Three.js releases can be modified for up to a week after the initial release. This build process should wait for this period of time to ensure future consistency of building.
