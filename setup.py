@@ -1,8 +1,15 @@
 from setuptools import setup
-setup(data_files = [(
-    # When trying to put this in setup.cfg,
-    # the dash is replaced by underscore on installation?!
-    'share/jupyter/nbextensions/threejs-sage/r122', [
-        'jupyter_threejs_sage/static/r122/three.min.js'
-    ])]
+import os
+
+with open('version') as f:
+    package_version_without_r = f.read()[1:]
+
+versions = [ x for x in os.listdir('jupyter_threejs_sage/static') if x.startswith('r') ]
+
+setup(
+    version=package_version_without_r,
+    data_files = [(
+        f'share/jupyter/nbextensions/threejs-sage/{version}', [
+            f'jupyter_threejs_sage/static/{version}/three.min.js'
+        ]) for version in versions]
 )
